@@ -1,0 +1,1297 @@
+@font-face {
+    font-family: 'quicksand-bold-webfont';
+    src: url('../fonts/quicksand-bold-webfont.eot');
+    src: url('../fonts/quicksand-bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/quicksand-bold-webfont.woff2') format('woff2'),
+         url('../fonts/quicksand-bold-webfont.woff') format('woff'),
+         url('../fonts/quicksand-bold-webfont.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'quicksand-light-webfont';
+    src: url('../fonts/quicksand-light-webfont.eot');
+    src: url('../fonts/quicksand-light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/quicksand-light-webfont.woff2') format('woff2'),
+         url('../fonts/quicksand-light-webfont.woff') format('woff'),
+         url('../fonts/quicksand-light-webfont.ttf') format('truetype');
+    font-weight: lighter;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'quicksand-regular-webfont';
+    src: url('../fonts/quicksand-regular-webfont.eot');
+    src: url('../fonts/quicksand-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/quicksand-regular-webfont.woff2') format('woff2'),
+         url('../fonts/quicksand-regular-webfont.woff') format('woff'),
+         url('../fonts/quicksand-regular-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+body, html, h2, h3, p {
+	margin: 0px;
+	padding: 0px;
+}
+
+html {
+	font-size: 62.5%;
+}
+
+body {
+	font-family: "quicksand-regular-webfont", sans-serif;
+	font-size: 1.8rem;
+	color: #454545;
+}
+
+/* PAGE-HEADER */
+.page-header {
+	margin: 15px;
+	box-sizing: border-box;
+    height: 36px;
+    background: #FFFFFF;
+}
+
+.header-logo {
+	float: left;
+}
+
+.header-hamburger {
+	border: none;
+	margin: 0px;
+    margin-top: 11px;
+    margin-right: 2px;
+	padding: 0px;
+	background-color: white;
+	float: right;
+    outline: none;
+    cursor: pointer;
+}
+
+.page-header {
+    z-index: 2;
+}
+
+
+
+#page-navigation {
+    background: #FFFFFF;
+    position: absolute;
+    width: 100%;
+    top: 66px;
+    left: 0px;
+    margin: 0px;
+    z-index: 1;
+
+    text-align: center;
+
+    margin: 0px;
+    padding: 0px;
+
+    font-size: 2.0rem;
+
+}
+
+
+
+
+#page-navigation li {
+    list-style: none;
+
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+#page-navigation li:first-child  {
+    margin-top: 30px;
+}
+
+
+#page-navigation a {
+    color: #000000;
+    text-decoration: none;
+}
+
+.closed {
+    display: none;
+}
+
+#background-click {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+
+
+/* =ARTICLE-HEADER */
+.article-header {
+    background: url("../images/header-background.png") no-repeat;
+    background-size: cover;
+    padding-top: 120px;
+    padding-bottom: 40px;
+    padding-left: 15px;
+    padding-right: 15px;
+    text-align: center;
+    color: #FFFFFF;
+
+}
+
+.line-behind {
+    font-size: 2.4rem;
+    font-family: 'quicksand-light-webfont', sans-serif;
+
+    margin: 0px;
+    position: relative;
+    overflow: hidden;
+}
+
+.line-behind span {
+    display: inline-block;
+    vertical-align: baseline;
+
+    zoom: 1;
+    *display: inline;
+    *vertical-align: auto;
+    position: relative;
+    padding: 0 12px;
+}
+
+.line-behind span::before,
+.line-behind span::after {
+    content: "";
+    display: block;
+    width: 60%;
+    position: absolute;
+
+
+    border-top: solid 1px #ffffff;
+    top: 1.5rem;
+    opacity: 0.6;
+    /*margin: 0 auto;
+    width: 93%;
+
+    top: 50%; left: 0; right: 0; bottom:0;*/
+}
+.line-behind span::before {
+    right: 100%;
+}
+
+.line-behind span::after {
+    left: 100%;
+}
+
+
+.article-header h1 {
+    font-size: 5.6rem;
+    font-family: 'quicksand-bold-webfont', sans-serif;
+
+    margin: 0px;
+    margin-top: 16px;
+    margin-bottom: 50px;
+}
+
+.header-button {
+    background: none;
+    border: none;
+    color: #FFFFFF;
+
+    font-family: 'quicksand-regular-webfont', sans-serif;
+    font-size: 1.4rem;
+
+    border: solid 2px #FFFFFF;
+    padding: 8px 24px;
+    border-radius: 1.8rem;
+
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+
+    margin-bottom: 33px;
+
+    transition: 0.3s;
+
+    outline: none;
+    cursor: pointer;
+}
+
+.header-button:hover {
+    background-color: #FFFFFF;
+    color: #000000;
+    transition: 0.5s;
+}
+
+#arrows {
+    padding-top: 20px;
+
+    animation-name: arrowtrans;
+    animation-duration: 1.5s; 
+    animation-iteration-count: infinite;
+
+}
+
+@keyframes arrowtrans {
+    0% {transform: translate(0, 5px);}
+    50% {transform: translate(0, -5px);}
+    100% {transform: translate(0, 5px);}
+}
+
+#arrows:hover {
+
+    transition: 0.5s;
+}
+
+
+
+/* =PROGRESS BARS */
+#progress-bars {
+    overflow: hidden;
+    margin-top: 0px;
+    padding-top: 50px;
+    text-align: center;
+}
+
+
+
+
+.progress-container {
+
+    display: inline-block;
+    vertical-align: top;
+    width: 228;
+    height: 228;
+
+    text-align: center;
+
+    margin-bottom: 50px;
+
+
+    margin-right: 4%;
+    margin-left: 4%;
+
+}
+
+.progress-radial-bg {
+    position: absolute;
+
+    width: 220px;
+    height: 220px;
+
+    border-radius: 50%;
+
+    margin-top: 2px;
+    margin-left: 2px;
+    background-color: #FFFFFF;
+    border: 2px solid #E5E3E3;
+    z-index: -1;
+
+    text-align: center;
+}
+
+
+
+.progress-radial-bg svg {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+
+.progress-radial-bg svg path {
+    position: absolute;
+    z-index: 1;
+
+}
+
+.progress-number {
+    font-family: "quicksand-bold-webfont", sans-serif;
+    font-size: 7.2rem;
+    
+    padding-top: 40px;
+}
+
+.progress-text {
+    font-family: "quicksand-regular-webfont", sans-serif;
+    font-size: 1.8rem;
+    color: #454545;
+
+    padding-top: 0px;
+}
+
+#progress-proj .progress-number {
+    color: #F34739;
+}
+
+#progress-clients .progress-number {
+    color: #009989;
+}
+
+#progress-months .progress-number {
+    color: #152B3C;
+}
+
+.progress-description {
+    width: 220px;
+    margin-right: auto;
+    margin-left: auto;
+
+    margin-top: 15px;
+}
+
+
+/* =OUR-TEAM */ 
+#our-team .section-header {
+    background-image: url('../images/our-team-header.png');
+}
+
+.section-header {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-origin: border-box;
+
+    padding: 20px 15px;
+}
+
+.section-header div {
+    border: 2px solid #FFFFFF;
+    text-align: center;
+    color: #FFFFFF;
+    padding: 50px 10px;
+}
+
+.section-header .line-behind span::before,
+.section-header .line-behind span::after {
+    width: 70%;
+    top: 1.1rem;
+}
+
+.section-header p {
+    font-size: 1.8rem;
+}
+
+.section-header h2 {
+    font-size: 4.8rem;
+}
+
+.team-people {
+    margin-bottom: 40px;
+}
+
+.team-information {
+    text-align: center;
+    margin: 40px 15px 0px 15px;
+    border: 3px solid #000000;
+    padding: 40px 50px 50px 50px;
+    border-bottom: none;
+
+
+    color: #000000;
+    font-family: "quicksand-regular-webfont", sans-serif;
+}
+
+.person {
+    position: relative;
+}
+
+.team-information h3 {
+    font-size: 3.6rem;
+}
+
+.team-information .position {
+    font-size: 1.6rem;
+
+    padding-bottom: 20px;
+    margin-bottom: 33px;
+}
+
+.team-information .position::after {
+    border-bottom: 3px solid #F34739;
+    content: "";
+    margin: 0 auto; /* this centers the line to the full width specified */
+    position: absolute; /* positioning must be absolute here, and relative positioning must be applied to the parent */
+    left: 0; right: 0; 
+    top: 100%;
+    width: 55%;
+}
+
+.team-information .description {
+    color:#454545;
+    font-size: 2.0rem;
+}
+
+.team-information {
+    position: relative;
+}
+
+.team-information::after {
+    content: "";
+    border-top: 20px solid #FFFFFF;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+
+    position: absolute;
+    top: 100%;
+    transform: translate(-50%, 0);
+}
+
+
+#adrianna .team-photo {
+    background-image: url('../images/team-adrianna.png');
+}
+
+#olivia .team-photo {
+    background-image: url('../images/team-olivia.png');
+}
+
+#thomas .team-photo {
+    background-image: url('../images/team-thomas.png');
+}
+
+#taylor .team-photo {
+    background-image: url('../images/team-taylor.png');
+}
+
+#our-team .team-photo {
+    width: 100%;
+    height: 240px;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.border {
+    border: 3px solid #FFFFFF;
+    border-top: 0px;
+    margin: 0px 15px 20px 15px;
+    width: calc(100%-30px);
+    height: 217px;
+}
+
+
+/* =PORTFOLIO */
+#portfolio .section-header {
+    background-image: url('../images/portfolio-header.png');
+}
+
+#portfolio .line-behind span::before,
+#portfolio .line-behind span::after {
+    width: 20%;
+}
+
+
+.portfolio-pictures {
+    font-size: 0px;
+}
+
+.portfolio-pictures img {
+    margin: 0px;
+    padding: 0px;
+
+
+    opacity: 0.5;
+    filter: grayscale(1);
+    -webkit-filter: grayscale(1);
+    -ms-filter: grayscale(1);
+    -moz-filter: grayscale(1);
+    transition: 0.5s;
+
+    width: 100%;
+
+
+}
+
+.img-wrapper {
+    overflow: hidden;
+    float: left;
+    width: 33.33%;
+}
+.portfolio-pictures {
+    overflow: hidden;
+}
+
+.portfolio-pictures img:hover {
+    transition: 0.6s;
+    opacity: 1.0;
+    filter: grayscale(0);
+    -webkit-filter: grayscale(0);
+    -ms-filter: grayscale(0);
+    -moz-filter: grayscale(0);
+
+    transform: scale(1.1);
+}
+
+/* =BRANDS */
+#brands .section-header {
+    background-image: url('../images/brands-header.png');
+}
+
+#brands .line-behind span::before,
+#brands .line-behind span::after {
+    width: 20%;
+}
+
+#brand-01 {
+    background-image: url("../images/brand-01.png");
+}
+#brand-02 {
+    background-image: url("../images/brand-02.png");
+}
+#brand-03 {
+    background-image: url("../images/brand-03.png");
+}
+#brand-04 {
+    background-image: url("../images/brand-04.png");
+}
+#brand-05 {
+    background-image: url("../images/brand-05.png");
+}
+#brand-06 {
+    background-image: url("../images/brand-06.png");
+}
+#brand-07 {
+    background-image: url("../images/brand-07.png");
+}
+#brand-08 {
+    background-image: url("../images/brand-08.png");
+}
+#brand-09 {
+    background-image: url("../images/brand-09.png");
+}
+#brand-10 {
+    background-image: url("../images/brand-10.png");
+}
+#brand-11 {
+    background-image: url("../images/brand-11.png");
+}
+#brand-12 {
+    background-image: url("../images/brand-12.png");
+}
+
+.logo {
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+
+    opacity: 0.25;
+
+    filter: grayscale(1);
+    -webkit-filter: grayscale(1);
+    -ms-filter: grayscale(1);
+    -moz-filter: grayscale(1);
+
+    transition: 0.3s;
+}
+
+
+
+.logo:hover {
+    transition: 0.5s;
+    opacity: 0.7;
+
+    filter: grayscale(0);
+    -webkit-filter: grayscale(0);
+    -ms-filter: grayscale(0);
+    -moz-filter: grayscale(0);
+
+
+}
+
+.logo::before {
+    border-bottom: 1px solid #F0F0F0;
+    content: "";
+    margin: 0 auto; /* this centers the line to the full width specified */
+    position: absolute; /* positioning must be absolute here, and relative positioning must be applied to the parent */
+    left: -500%; right: 0; 
+    top: -1px;
+    width: 2000%;
+}
+
+.logo:last-child::after {
+    border-bottom: 1px solid #D0D0D0;
+    content: "";
+    margin: 0 auto; /* this centers the line to the full width specified */
+    position: absolute; /* positioning must be absolute here, and relative positioning must be applied to the parent */
+    left: -1000%; right: 0; 
+    top: 101%;
+    width: 20000%;
+}
+
+.brand-logos {
+    padding-top: 40px;
+    padding-bottom: 15px;
+    overflow: hidden;
+    text-align: center;
+    margin-right: auto;
+    margin-left: auto;
+    font-size: 0px;
+
+}
+
+.brand-logos div {
+    height: 150px;
+    width: 145px;
+    display: inline-block;
+    line-height: 150px;
+}
+
+.brand-logos img{
+    top: 50%;
+}
+
+
+/* =ARTICLE-FOOTER */
+.article-footer ul {
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+}
+
+.article-footer a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.article-footer {
+    text-align: center;
+    background-color: #101010;
+    padding: 54px 100px 40px 100px;
+
+    vertical-align: text-top;
+}
+
+.article-footer li {
+    margin-bottom: 80px;
+}
+
+.article-footer li:last-child {
+    margin-bottom: 0px;
+}
+
+.article-footer h3 {
+    color: #FFFFFF;
+    font-size: 3.0rem;
+    font-family: "quicksand-light-webfont", sans-serif;
+
+    padding-bottom: 20px;
+    margin-bottom: 31px;
+    position: relative;
+}
+
+.article-footer h3::after {
+    border-bottom: 1px solid #019081;
+    content: "";
+    margin: 0 auto; /* this centers the line to the full width specified */
+    position: absolute; /* positioning must be absolute here, and relative positioning must be applied to the parent */
+    left: 0; right: 0; 
+    top: 100%;
+    width: 38%;
+
+    transition: 0.5s;
+}
+
+.article-footer h3:hover::after {
+    transition: 0.7s;
+    width: 100%;
+}
+
+.article-footer p {
+    color: #4A4A4A;
+    font-family: "quicksand-regular-webfont", sans-serif;
+    font-size: 1.8rem;
+}
+
+
+/* =FOOTER */
+.page-footer {
+    padding: 25px 0px;
+    margin: 0px;
+    text-align: center;
+    font-size: 1.4rem;
+    font-family: 'quicksand-regular-webfont', sans-serif;
+    color: #4A4A4A;
+    background-color: #0E0E0D;
+}
+
+
+
+.social-media, 
+.header-hamburger p,
+.desktop,
+.brand-logos .desktop {
+    display: none;
+}
+
+#port-13, #port-14, #port-15 {
+    display: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* =DESKTOP */
+@media only screen and (min-width: 40em) {
+
+    /* =HEADER-D */
+    .page-header {
+        margin: 0px;
+        padding: 0px;
+        height: 80px;
+    }
+
+    .page-header section {
+        float: left;
+        width: 78%;
+
+        padding: 15px 0px 20px 0px;
+        height: 45px;
+    }
+
+    .header-logo {
+        content:url('../images/logo-screen.png');
+        margin-left: 15px;
+    }
+
+    #facebook-link {
+        background-image: url('../images/ico-facebook.png');
+    }
+
+    #instagram-link {
+        background-image: url('../images/ico-instagram.png');
+    }
+
+    #twitter-link {
+        background-image: url('../images/ico-twitter.png');
+    }
+
+    #linkedin-link {
+        background-image: url('../images/ico-linked.png');
+    }
+
+    .social-media {
+        display: block;
+    }
+
+    .social-media div {
+        height: 23px;
+        width: 26px;
+        float: right;
+        opacity: 1.0;
+        background-repeat: no-repeat;
+        background-position: center;
+        margin: 13px 28px 0px 0px;
+        overflow: hidden;
+        transition: 0.3s;
+    }
+
+    .social-media div:hover {
+        opacity: 0.7;
+        transition: 0.5s;
+    }
+
+    .page-header nav {
+        background-color: #000000;
+        float: right;
+        overflow: hidden;
+        width: 22%;
+        margin: 0px;
+        padding: 0px;
+        height: 80px;
+    }
+
+    .header-hamburger {
+        background-color: #000000;
+        margin-top: 27px;
+        margin-left: 30px;
+        float: left;
+    }
+
+    .header-hamburger img{
+        margin-top: 5px;
+        margin-right: 22px;
+        content: url('../images/hamburger-icon-white.png');
+    }
+
+    .header-hamburger p {
+        float: right;
+        color: #FFFFFF;
+        display: inline-block;
+        font-size: 1.8rem;
+        font-family: 'quicksand-light-webfont', sans-serif;
+    }
+
+    #page-navigation {
+        background: #000000;
+        top: 80px;
+        width: 22%;
+        right: 0px;
+        left: auto;
+        text-align: left;
+    }
+
+    #page-navigation li {
+        padding-left: 7%;
+        margin-top: 50px;
+        margin-bottom: 50px;
+    }
+
+    #page-navigation a {
+        color: #FFFFFF;
+    }
+
+    
+
+    .article-header {
+        background: url("../images/header-background-screen.png") no-repeat;
+        background-size: cover;
+        padding-top: 180px;
+        padding-bottom: 50px;
+    }
+
+
+    .article-header h1 {
+        font-size: 7.2rem;
+        margin-top: 0px;
+        margin-bottom: 30px;
+    }
+
+    .header-button {
+        font-size: 1.8rem;
+
+        padding: 0px;
+        height: 46px;
+        width: 200px;
+
+        border-radius: 2.2rem;
+
+        margin-bottom: 132px;
+    }
+
+
+    /* =OUR-TEAM-D */
+    #our-team .section-header {
+        background-image: url('../images/our-team-header-d.png');
+    }
+
+    .section-header {
+        padding: 50px 20px;
+    }
+
+
+    .team-people {
+        width: 100%;
+        float: none;
+        clear: both;
+        overflow: hidden;
+        margin: 0px;
+    }
+
+    #adrianna {
+        margin-top: 50px;
+    }
+
+    #taylor {
+        margin-bottom: 30px;
+    }
+
+    
+
+    #adrianna .team-information,
+    #thomas .team-information {
+        float: right;
+    }
+
+    #our-team .team-photo {
+        width: 50%;
+
+        float: left;
+    }
+
+    #adrianna .team-photo {
+        background-image: url('../images/team-adrianna-d.png');
+    }
+
+    #olivia .team-photo {
+        background-image: url('../images/team-olivia-d.png');
+    }
+
+    #thomas .team-photo {
+        background-image: url('../images/team-thomas-d.png');
+    }
+
+    #taylor .team-photo {
+        background-image: url('../images/team-taylor-d.png');
+    }
+
+    #our-team .team-photo {
+        height: 300px;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .border {
+        border: 3px solid #FFFFFF;
+        /*width: calc(50%-20px);*/
+        height: 254px;
+    }
+
+    #adrianna .border,
+    #thomas .border {
+        border-right: 0px;
+        margin: 20px 0px 20px 20px;
+    }
+
+    #olivia .border,
+    #taylor .border {
+        border-left: 0px;
+        margin: 20px 20px 20px 0px;
+    }
+
+    .team-information {
+        box-sizing: border-box;
+        width: calc(50% - 20px);
+        height: 260px;
+        
+        margin: 0px;
+        padding: 0px;
+
+        float: left;
+
+        border: 3px solid #000000;
+
+        padding: 35px 5% 0px 5%;
+    }
+
+
+    #adrianna .team-information,
+    #thomas .team-information {
+        border-left: none;
+        margin: 20px 20px 20px 0px;
+    }
+
+    #olivia .team-information,
+    #taylor .team-information {
+        border-right: none;
+        margin: 20px 0px 20px 20px;
+    }
+
+    .team-information .position {
+        font-size: 1.5rem;
+
+        padding-bottom: 20px;
+        margin-bottom: 30px;
+    }
+
+    .team-information .description {
+        color:#454545;
+        font-size: 1.8rem;
+    }
+
+    #adrianna .team-information::after,
+    #thomas .team-information::after {
+        border-left: none;
+        border-right: 30px solid #FFFFFF;
+        border-top: 35px solid transparent;
+        border-bottom: 35px solid transparent;
+
+        position: absolute;
+        top: 50%;
+        left: 0;
+
+        transform: translate(-100%, -50%);
+    }
+
+    #olivia .team-information::after,
+    #taylor .team-information::after {
+        border-right: none;
+        border-left: 30px solid #FFFFFF;
+        border-top: 35px solid transparent;
+        border-bottom: 35px solid transparent;
+
+        position: absolute;
+        top: 50%;
+        left: 100%;
+
+        transform: translate(0, -50%);
+
+    }
+
+
+
+    /* =PORTFOLIO-D */
+    #portfolio .section-header {
+        background-image: url('../images/portfolio-header-d.png');
+    }
+    .img-wrapper {
+        width: 20%;
+    }
+
+    #port-13, #port-14, #port-15 {
+        display: block;
+    }
+
+    #port-1 {
+        content: url('../images/portfolio-d-01.png');
+    }
+
+    #port-2 {
+        content: url('../images/portfolio-d-02.png');
+    }
+
+    #port-3 {
+        content: url('../images/portfolio-d-03.png');
+    }
+
+    #port-4 {
+        content: url('../images/portfolio-d-04.png');
+    }
+
+    #port-5 {
+        content: url('../images/portfolio-d-05.png');
+    }
+
+    #port-6 {
+        content: url('../images/portfolio-d-06.png');
+    }
+
+    #port-7 {
+        content: url('../images/portfolio-d-07.png');
+    }
+
+    #port-8 {
+        content: url('../images/portfolio-d-08.png');
+    }
+
+    #port-9 {
+        content: url('../images/portfolio-d-09.png');
+    }
+
+    #port-10 {
+        content: url('../images/portfolio-d-10.png');
+    }
+
+    #port-11 {
+        content: url('../images/portfolio-d-11.png');
+    }
+
+    #port-12 {
+        content: url('../images/portfolio-d-12.png');
+    }
+
+    #port-13 {
+        content: url('../images/portfolio-d-13.png');
+    }
+
+    #port-14 {
+        content: url('../images/portfolio-d-14.png');
+    }
+
+    #port-15 {
+        content: url('../images/portfolio-d-15.png');
+    }
+
+
+
+    /* =BRANDS-D */
+    #brands .section-header {
+        background-image: url('../images/brands-header-d.png');
+    }
+
+    .brand-logos .desktop {
+        display: inline-block;
+    }
+    #brand-01 {
+    background-image: url("../images/brand-d-01.png");
+    }
+    #brand-02 {
+        background-image: url("../images/brand-d-02.png");
+    }
+    #brand-03 {
+        background-image: url("../images/brand-01.png");
+    }
+    #brand-04 {
+        background-image: url("../images/brand-02.png");
+    }
+    #brand-05 {
+        background-image: url("../images/brand-03.png");
+    }
+    #brand-06 {
+        background-image: url("../images/brand-d-06.png");
+    }
+    #brand-07 {
+        background-image: url("../images/brand-d-07.png");
+    }
+    #brand-08 {
+        background-image: url("../images/brand-d-08.png");
+    }
+    #brand-09 {
+        background-image: url("../images/brand-d-09.png");
+    }
+    #brand-10 {
+        background-image: url("../images/brand-04.png");
+    }
+    #brand-11 {
+        background-image: url("../images/brand-05.png");
+    }
+    #brand-12 {
+        background-image: url("../images/brand-06.png");
+    }
+    #brand-13 {
+        background-image: url("../images/brand-d-13.png");
+    }
+    #brand-14 {
+        background-image: url("../images/brand-d-14.png");
+    }
+    #brand-15 {
+        background-image: url("../images/brand-d-15.png");
+    }
+    #brand-16 {
+        background-image: url("../images/brand-d-16.png");
+    }
+    #brand-17 {
+        background-image: url("../images/brand-08.png");
+    }
+    #brand-18 {
+        background-image: url("../images/brand-09.png");
+    }
+    #brand-19 {
+        background-image: url("../images/brand-d-19.png");
+    }
+    #brand-20 {
+        background-image: url("../images/brand-d-20.png");
+    }
+    #brand-21 {
+        background-image: url("../images/brand-d-21.png");
+    }
+    #brand-22 {
+        background-image: url("../images/brand-d-22.png");
+    }
+    #brand-23 {
+        background-image: url("../images/brand-10.png");
+    }
+    #brand-24 {
+        background-image: url("../images/brand-11.png");
+    }
+    #brand-25 {
+        background-image: url("../images/brand-12.png");
+    }
+    #brand-26 {
+        background-image: url("../images/brand-d-26.png");
+    }
+    #brand-27 {
+        background-image: url("../images/brand-d-27.png");
+    }   
+
+    .brand-logos {
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+
+
+
+    /* =ARTICLE-FOOTER-D */
+
+    .article-footer {
+        padding: 54px 0px 40px 0px;
+    }
+
+    .article-footer li {
+        width: 230px;
+        margin-right: 4%;
+        margin-left: 4%;
+        display: inline-block;
+    }
+
+    .article-footer p {
+        font-size: 1.7rem;
+    }
+
+    .article-footer h3::after {
+        width: 65%;
+    }
+
+    .article-footer h3:hover::after {
+        transition: 0.7s;
+        width: 100%;
+    }
+
+}
+
+@media only screen and (min-width: 90em) {
+
+    .header-logo {
+        margin-left: 15%;
+    }
+    
+
+    
+
+    .section-header div {
+        width: 1200px;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    .team-people {
+        width: 1400px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .brand-logos {
+        width: 1400px;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    
+    .article-footer li {
+        margin-right: 2%;
+        margin-left: 2%
+}
+
+   
+
+@media only screen and (min-width: 100em) {
+
+    .portfolio-pictures {
+        width: 1800px;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    .header-logo {
+        margin-left: 30%;
+    }
+
+    .page-header section {
+        width: 65%;
+    }
+
+    .page-header nav {
+        width: 35%;
+    }
+
+    #page-navigation {
+        width: 35%;
+    }
+
+    #page-navigation li{
+        padding-left: 40px;
+    }
+}
